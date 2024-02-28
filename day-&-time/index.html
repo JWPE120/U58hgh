@@ -1,19 +1,10 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Waktu, Hari, dan Tanggal</title>
     <style>
-        body {
-            background: black;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-
         .clock-container {
             background: linear-gradient(135deg, magenta, cyan);
             border: 2px solid white;
@@ -40,10 +31,10 @@
     <script>
         function updateClock() {
             const now = new Date();
-            const days = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
-            const day = days[now.getDay()];
+            const locale = navigator.language; // Mendapatkan bahasa yang digunakan oleh perangkat pengguna
+            const day = now.toLocaleString(locale, { weekday: 'long' }); // Penulisan hari sesuai bahasa perangkat
             const date = now.getDate();
-            const month = now.toLocaleString("default", { month: "long" });
+            const month = now.toLocaleString(locale, { month: "long" });
             const year = now.getFullYear();
             const time = now.toLocaleTimeString();
 
