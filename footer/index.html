@@ -4,14 +4,28 @@
   <title></title>
   <style>
     footer {
-      display: none; /* Menyembunyikan footer seluruhnya */
+      display: none; /* Menghilangkan bagian lain selain .footer */
     }
 
     .footer {
       border: 2px solid white;
-      background: linear-gradient(to right, magenta, cyan); /* Mengubah background menjadi linear-gradient */
+      background: linear-gradient(to right, magenta, cyan);
       color: white;
       text-align: center;
+    }
+
+    /* CSS untuk gambar bulat */
+    .footer img {
+      border-radius: 50%; /* Mengubah gambar menjadi bulat */
+      margin: 5px; /* Jarak antara gambar */
+      float: left; /* Floating gambar ke kiri */
+    }
+
+    /* CSS untuk elemen tulisan di samping kanan */
+    .footer .text {
+      float: left; /* Floating tulisan ke kiri */
+      line-height: 50px; /* Mencocokkan tinggi tulisan dengan gambar */
+      margin-left: 10px; /* Jarak antara tulisan dengan gambar */
     }
   </style>
 </head>
